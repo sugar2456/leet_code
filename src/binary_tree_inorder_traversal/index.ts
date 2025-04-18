@@ -14,7 +14,22 @@ export class TreeNode {
 
 // 問題
 // Given the root of a binary tree, return the inorder traversal of its nodes' values.
-// 二分木の中序走査を行う関数
+
+/**
+ * 探索木中順走査
+ * 
+ * [処理の流れ]
+ * 結果の配列変数を初期化  
+ * 中順走査のヘルパー関数を定義  
+ * nodeがnullなら返却  
+ * nodeにleftが存在するなら再起的に呼び出す  
+ * nodeの値を結果に詰める  
+ * nodeのrightが存在するなら再起的に呼び出す  
+ * 結果を返却する  
+ *
+ * @param root 探索木
+ * @returns 探索結果の値の配列
+ */
 export function inorderTraversal(root: TreeNode | null): number[] {
     const result: number[] = [];
     
