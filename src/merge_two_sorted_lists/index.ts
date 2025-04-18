@@ -13,6 +13,22 @@ export class ListNode {
     }
 }
 
+/**
+ * 二つのNodeListをマージする関数
+ * 
+ * [処理の流れ]
+ * ダミーヘッドを作成する
+ * ListNodeをループする
+ * 値が小さいノードを次のノードに設定する
+ * nodeを一つずらす
+ * 次のノードを現在のノードに設定する
+ * 残りのnodeを設定する
+ * ダミーの次のポインタを返却する
+ * 
+ * @param list1 NodeList1
+ * @param list2 NodeList2
+ * @returns NodeList
+ */
 export function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
     // ダミーヘッドを作成（最初のノードを簡単に扱うため）
     const dummyHead = new ListNode(-1);
